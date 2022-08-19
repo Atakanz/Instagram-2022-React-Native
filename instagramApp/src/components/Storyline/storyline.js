@@ -6,10 +6,10 @@ const Story = props => {
     <View>
       <Image 
         style={[(
-          props.name === 'Your story') 
+          props.name === 'Your story')
             ? styles.your_story
             : styles.friends_stories
-        ]} 
+        ]}
         source={{uri: props.link}}
       />
       <Text style={styles.story_name}>{props.name}</Text>

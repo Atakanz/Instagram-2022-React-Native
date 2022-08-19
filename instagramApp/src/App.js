@@ -6,10 +6,13 @@ import {
   Image,
   Dimensions,
   ScrollView,
+  FlatList,
 } from 'react-native';
 // import post_data from './post_data.json';
 import Story from './components/Storyline';
+import post_data from './post_data.json';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Postcard from './components/Posts';
 const App = () => {
   const firstIcon = <Icon name="plus-box" size={30} color="black" />;
   const middleIcon = <Icon name="heart-outline" size={30} color="black" />;
@@ -33,20 +36,46 @@ const App = () => {
           </View>
         </View>
       </View>
-      <View style={styles.stories}>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          <Story
-            name="Your story"
-            link="https://picsum.photos/id/238/200/300"
-          />
-          <Story name="atakanz" link="https://picsum.photos/id/236/200/300" />
-          <Story name="atakanz" link="https://picsum.photos/id/235/200/300" />
-          <Story name="atakanz" link="https://picsum.photos/id/234/200/300" />
-          <Story name="atakanz" link="https://picsum.photos/id/233/200/300" />
-          <Story name="atakanz" link="https://picsum.photos/id/232/200/300" />
-          <Story name="atakanz" link="https://picsum.photos/id/231/200/300" />
-          <View style={styles.addStory}>{addStoryIcon}</View>
-        </ScrollView>
+      <View>
+        <FlatList
+          ListHeaderComponent={() => (
+            <View style={styles.stories}>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                <Story
+                  name="Your story"
+                  link="https://picsum.photos/id/237/200/300"
+                />
+                <Story
+                  name="merics"
+                  link="https://picsum.photos/id/235/200/300"
+                />
+                <Story
+                  name="ahmetz"
+                  link="https://picsum.photos/id/334/200/300"
+                />
+                <Story
+                  name="onurt"
+                  link="https://picsum.photos/id/238/200/300"
+                />
+                <Story
+                  name="fatihy"
+                  link="https://picsum.photos/id/233/200/300"
+                />
+                <Story
+                  name="selimk"
+                  link="https://picsum.photos/id/232/200/300"
+                />
+                <Story
+                  name="cansub"
+                  link="https://picsum.photos/id/231/200/300"
+                />
+                <View style={styles.addStory}>{addStoryIcon}</View>
+              </ScrollView>
+            </View>
+          )}
+          data={post_data}
+          renderItem={({item}) => <Postcard posts={item} />}
+        />
       </View>
     </SafeAreaView>
   );
