@@ -1,5 +1,5 @@
-import React from "react";
-import {View, Image, Text} from "react-native";
+import React from 'react';
+import {View, Image, Text} from 'react-native';
 import styles from './posts.style'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icons from 'react-native-vector-icons/FontAwesome';

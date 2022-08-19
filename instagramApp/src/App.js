@@ -9,7 +9,7 @@ import {
   FlatList,
 } from 'react-native';
 // import post_data from './post_data.json';
-import Story from './components/Storyline';
+import Story from './components/Story';
 import post_data from './post_data.json';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Postcard from './components/Posts';
@@ -82,15 +82,15 @@ const App = () => {
         />
       </View>
       <View style={styles.footer}>
-              <View>{home}</View>
-              <View>{search}</View>
-              <View>{play}</View>
-              <View>{shop}</View>
-              <Image
-                style={styles.footerPhoto}
-                source={{uri: 'https://picsum.photos/id/237/200/300'}}
-              />
-            </View>
+        <View>{home}</View>
+        <View>{search}</View>
+        <View>{play}</View>
+        <View>{shop}</View>
+        <Image
+          style={styles.footerPhoto}
+          source={{uri: 'https://picsum.photos/id/237/200/300'}}
+        />
+      </View>
     </SafeAreaView>
   );
 };
