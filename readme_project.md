@@ -6,7 +6,7 @@ The data for the story and post sections are available in .json format in the /s
 1) Navbar: The logo is at the beginning, and the icons are at the end with (marginLeft:auto). 
 2) Story: Horizontal scrollview, conditional styling (props.name===Your story ? styles.noBorder:styles.redBorder), header component of FlatList
 3) Posts: FlatList, The data is read from a json file and sent to a custom component file as an item with props. 
-4) Footer: is set to sticky with absolute position and bottom:0. 
+4) Footer: is set to sticky with absolute-position and bottom:0. 
 
 
 ![ScreenShot](instagramApp1.png)
