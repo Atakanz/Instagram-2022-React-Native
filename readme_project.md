@@ -1,7 +1,7 @@
 # Instagram 2022 Clone
 
 In this project, the flow of Instagram's main page is redesigned using React Native. The project makes use of lorem picsum pictures and lorem sentences as data. MaterialCommunityIcons and Fontawesome were used to create the icons.
-The data for the story and post sections are available in .json format in the /src folder. Some styling priorities for views are shown in the list below. 
+The data for the post section are available in .json format in the /src folder. Some styling priorities for views are shown in the list below. 
 
 1) Navbar: The logo is at the beginning, and the icons are at the end with (marginLeft:auto). 
 2) Stories: Horizontal scrollview, conditional styling (props.name===Your story ? styles.noBorder:styles.redBorder), header component of FlatList
